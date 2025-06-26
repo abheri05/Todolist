@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        li{
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            color:black;
+            
+        }
+        button{
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            /* margin-right: 5px; */
+            
+        }
+        
+    </style>
+
+</head>
+<body class="min-h-screen text-white bg-gradient-to-br from-slate-600 to-blue-200  flex items-center flex-col">
+    <div id="clock" class="flex items-center justify-center border-2 mt-15 text-white backdrop-blur-md bg-white/20  font-medium p-5 rounded-lg w-[350px] h-[100px]">
+        <h2 id="time" class="text-5xl font-weight mr-2">00:00:00</h2>
+        <span id="timeformat" class="text-xl">PM</span>
+    </div>
+    <div class="mb-3  flex flex-col items-center justify-center mt-5 ">
+        <h1 class="text-5xl font-bold mb-9">Create Your  <span class="text-slate-800">TO-DO List!</span></h1>
+       <div class="flex gap-3" id="inputText">
+           <input class="bg-white/40 backdrop-blur-md p-3 w-[380px] rounded-md border-2 border-white outline-none text-black" type="text" id="dataList"  placeholder="Add your task....">
+           <button class="bg-slate-800 text-white w-[80px] text-xl rounded-md hover:bg-white hover:text-slate-800 hover:border-2 cursor-pointer" onclick="addTask()">Add</button>
+       </div>
+    </div>
+    
+    <ul class="hidden bg-white/40 backdrop-blur-md border-2 rounded-md w-[480px] p-2 mb-10" id="taskLists"></ul>
+
+
+    <script src="/script.js"></script>
+</body>
+</html>
